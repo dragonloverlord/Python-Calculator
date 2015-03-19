@@ -36,7 +36,7 @@ class CalcWindow(Gtk.Window):
         self.MainContainer.grid_container = Gtk.Grid()
         self.MainContainer.grid_container.set_column_homogeneous(True)
         self.MainContainer.grid_container.set_row_homogeneous(True)
-        self.MainContainer.attach(self.MainContainer.grid_container, 0, 0, 5, 4)
+        self.MainContainer.attach(self.MainContainer.grid_container, 0, 0, 5, 5)
 
         self.MainContainer.grid_container.entry = Gtk.Entry()
         self.MainContainer.grid_container.entry.set_text("0")
@@ -156,6 +156,26 @@ class CalcWindow(Gtk.Window):
         self.MainContainer.grid_container.buttons_row_four.button_enter = Gtk.Button("Enter")
         self.MainContainer.grid_container.buttons_row_four.button_enter.connect("clicked", calculate)
         self.MainContainer.grid_container.buttons_row_four.attach(self.MainContainer.grid_container.buttons_row_four.button_enter, 3, 0, 2, 1)
+
+        self.MainContainer.grid_container.buttons_row_five = Gtk.Grid()
+        self.MainContainer.grid_container.buttons_row_five.set_column_homogeneous(True)
+        self.MainContainer.grid_container.buttons_row_five.set_row_homogeneous(True)
+        self.MainContainer.grid_container.attach(self.MainContainer.grid_container.buttons_row_five, 0, 5, 5, 1)
+
+        self.MainContainer.grid_container.buttons_row_five.button_power = Gtk.Button("**")
+        self.MainContainer.grid_container.buttons_row_five.button_power.button_value = "**"
+        self.MainContainer.grid_container.buttons_row_five.button_power.connect("clicked", entryText)
+        self.MainContainer.grid_container.buttons_row_five.attach(self.MainContainer.grid_container.buttons_row_five.button_power, 0, 0, 1, 1)
+
+        self.MainContainer.grid_container.buttons_row_five.button_bitwise_invert = Gtk.Button("~")
+        self.MainContainer.grid_container.buttons_row_five.button_bitwise_invert.button_value = "~"
+        self.MainContainer.grid_container.buttons_row_five.button_bitwise_invert.connect("clicked", entryText)
+        self.MainContainer.grid_container.buttons_row_five.attach(self.MainContainer.grid_container.buttons_row_five.button_bitwise_invert, 1, 0, 1, 1)
+
+        self.MainContainer.grid_container.buttons_row_five.button_bitwise_or = Gtk.Button("|")
+        self.MainContainer.grid_container.buttons_row_five.button_bitwise_or.button_value = "|"
+        self.MainContainer.grid_container.buttons_row_five.button_bitwise_or.connect("clicked", entryText)
+        self.MainContainer.grid_container.buttons_row_five.attach(self.MainContainer.grid_container.buttons_row_five.button_bitwise_or, 2, 0, 1, 1)
 
 
 calc = CalcWindow()
