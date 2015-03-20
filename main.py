@@ -207,6 +207,11 @@ class CalcWindow(Gtk.Window):
         self.MainContainer.grid_container.buttons_row_six.button_lshift.connect("clicked", entryText)
         self.MainContainer.grid_container.buttons_row_six.attach(self.MainContainer.grid_container.buttons_row_six.button_lshift, 2, 0, 1, 1)
 
+        self.MainContainer.grid_container.buttons_row_six.button_rshift = Gtk.Button(">>")
+        self.MainContainer.grid_container.buttons_row_six.button_rshift.button_value = " >> "
+        self.MainContainer.grid_container.buttons_row_six.button_rshift.connect("clicked", entryText)
+        self.MainContainer.grid_container.buttons_row_six.attach(self.MainContainer.grid_container.buttons_row_six.button_rshift, 3, 0, 1, 1)
+
 
 calc = CalcWindow()
 calc.connect("delete-event", Gtk.main_quit)
