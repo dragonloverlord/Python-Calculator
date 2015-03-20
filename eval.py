@@ -176,7 +176,8 @@ DEFAULT_OPERATORS = {ast.Add: safe_add, ast.Sub: op.sub, ast.Mult: safe_mult,
                      ast.Eq: op.eq, ast.Gt: op.gt, ast.Lt: op.lt,
                      ast.GtE: op.ge, ast.LtE: op.le, ast.USub: op.neg,
                      ast.UAdd: op.pos, ast.FloorDiv: op.floordiv, ast.Invert: op.invert,
-                     ast.BitOr: op.or_, ast.BitAnd: op.and_, ast.Is: op.is_}
+                     ast.BitOr: op.or_, ast.BitAnd: op.and_, ast.Is: op.is_,
+                     ast.LShift: op.lshift}
 
 DEFAULT_FUNCTIONS = {"rand": random, "randint": random_int,
                      "int": int, "float": float, "str": str}
