@@ -187,6 +187,16 @@ class CalcWindow(Gtk.Window):
         self.MainContainer.grid_container.buttons_row_five.button_rper.connect("clicked", entryText)
         self.MainContainer.grid_container.buttons_row_five.attach(self.MainContainer.grid_container.buttons_row_five.button_rper, 4, 0, 1, 1)
 
+        self.MainContainer.grid_container.buttons_row_six = Gtk.Grid()
+        self.MainContainer.grid_container.buttons_row_six.set_column_homogeneous(True)
+        self.MainContainer.grid_container.buttons_row_six.set_row_homogeneous(True)
+        self.MainContainer.grid_container.attach(self.MainContainer.grid_container.buttons_row_six, 0, 6, 5, 1)
+
+        self.MainContainer.grid_container.buttons_row_six.button_and = Gtk.Button("&")
+        self.MainContainer.grid_container.buttons_row_six.button_and.button_value = "&"
+        self.MainContainer.grid_container.buttons_row_six.button_and.connect("clicked", entryText)
+        self.MainContainer.grid_container.buttons_row_six.attach(self.MainContainer.grid_container.buttons_row_six.button_and, 0, 0, 1, 1)
+
 
 calc = CalcWindow()
 calc.connect("delete-event", Gtk.main_quit)
