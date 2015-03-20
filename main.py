@@ -36,7 +36,7 @@ class CalcWindow(Gtk.Window):
         self.MainContainer.grid_container = Gtk.Grid()
         self.MainContainer.grid_container.set_column_homogeneous(True)
         self.MainContainer.grid_container.set_row_homogeneous(True)
-        self.MainContainer.attach(self.MainContainer.grid_container, 0, 0, 5, 5)
+        self.MainContainer.attach(self.MainContainer.grid_container, 0, 0, 5, 6)
 
         self.MainContainer.grid_container.entry = Gtk.Entry()
         self.MainContainer.grid_container.entry.set_text("0")
