@@ -193,9 +193,14 @@ class CalcWindow(Gtk.Window):
         self.MainContainer.grid_container.attach(self.MainContainer.grid_container.buttons_row_six, 0, 6, 5, 1)
 
         self.MainContainer.grid_container.buttons_row_six.button_and = Gtk.Button("&")
-        self.MainContainer.grid_container.buttons_row_six.button_and.button_value = "&"
+        self.MainContainer.grid_container.buttons_row_six.button_and.button_value = " & "
         self.MainContainer.grid_container.buttons_row_six.button_and.connect("clicked", entryText)
         self.MainContainer.grid_container.buttons_row_six.attach(self.MainContainer.grid_container.buttons_row_six.button_and, 0, 0, 1, 1)
+
+        self.MainContainer.grid_container.buttons_row_six.button_is = Gtk.Button("IS")
+        self.MainContainer.grid_container.buttons_row_six.button_is.button_value = " is "
+        self.MainContainer.grid_container.buttons_row_six.button_is.connect("clicked", entryText)
+        self.MainContainer.grid_container.buttons_row_six.attach(self.MainContainer.grid_container.buttons_row_six.button_is, 1, 0, 1, 1)
 
 
 calc = CalcWindow()
